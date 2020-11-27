@@ -1,8 +1,8 @@
-##Bookmark Api
+## Bookmark Api
 
 This api runs on http://localhost:8000
 
-#####Bookmarking
+##### Bookmarking
 
 Get all Bookmarks:
 
@@ -25,7 +25,7 @@ Remove a tag from Bookmark:
 Delete: http://localhost:8000/bookmarks/removeTagFromBookmark/id
 
 
-#####Tag Endpoints
+##### Tag Endpoints
 Get all Tags:
 
 Get: http://localhost:8000/tags/getTags
