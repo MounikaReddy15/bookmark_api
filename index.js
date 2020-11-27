@@ -2,8 +2,11 @@
 const express = require('express');
 const app = express();
 
-// connect to database
+// to connect to database
 const db = require("./config/mongoose");
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 const port = 8000;
 
