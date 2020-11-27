@@ -4,6 +4,11 @@ const Bookmark = require('../models/bookmark');
 const Tag = require('../models/tag');
 
 
+// welcome page
+module.exports.welcome = async function(req,res) {
+    res.send('This is Bookmark Api');
+}
+
 // to get all bookmarks
 module.exports.getBookmarks = async function(req,res) {
     try {

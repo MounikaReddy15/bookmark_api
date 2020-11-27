@@ -5,6 +5,7 @@ const router = express.Router();
 
 const api = require('../controllers/bookmark');
 
+router.get('/',api.welcome);
 router.get('/getBookmarks', api.getBookmarks);
 router.post('/createBookmark', api.createBookmark);
 router.patch('/addTagToBookmark/:bookmarkId', api.addTagToBookmark)
