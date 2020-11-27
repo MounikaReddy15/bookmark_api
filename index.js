@@ -8,7 +8,7 @@ const db = require("./config/mongoose");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 //we need to tell the app to use the exported router
 app.use('/', require('./routes'));
