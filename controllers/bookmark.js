@@ -34,6 +34,7 @@ module.exports.createBookmark = async function(req,res) {
 module.exports.addTagToBookmark = async function(req,res) {
     const bookmarkId = req.params.bookmarkId;
     try{
+        // checks for the tag in the db
         const addTag = await Tag.find(req.body);
         const tagId = addTag[0]._id;
         const bookmark = await Bookmark.findById(bookmarkId);
@@ -53,7 +54,6 @@ module.exports.addTagToBookmark = async function(req,res) {
 module.exports.removeTagFromBookmark = async function(req,res) {
     const bookmarkId = req.params.bookmarkId;
     try{
-        
         const removeTag = await Tag.find(req.body);
         const tagId = removeTag[0]._id;
         const bookmark = await Bookmark.findById(bookmarkId);
